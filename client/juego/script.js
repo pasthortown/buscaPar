@@ -1,4 +1,4 @@
-var wsURL = 'http://localhost/Fijate/server/';
+var wsURL = 'http://192.168.1.102/Fijate/server/';
 var CartaNueva = null;
 var CartaJugador = null;
 var Seleccionable = true;
@@ -55,7 +55,7 @@ function jugando() {
                                 if(element.seleccionJugador == 0){
                                     Seleccionable=true;
                                 }else{
-                                    document.getElementById(element.seleccionJugador).style.border= "5px solid red";
+                                    document.getElementById(element.seleccionJugador).style.border= "2px solid red";
                                     Seleccionable=false;
                                 }
                                 if(Seleccionable){
@@ -116,7 +116,7 @@ function selecciona(simbolo) {
                 
             }
         });
-        document.getElementById(simbolo).style.border= "5px solid red";
+        document.getElementById(simbolo).style.border= "2px solid red";
         Seleccionable=false;
     }
 }

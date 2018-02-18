@@ -1,4 +1,4 @@
-var wsURL = 'http://localhost/Fijate/server/';
+var wsURL = 'http://192.168.1.102/Fijate/server/';
 var CartaNueva = null;
 var IdJuego = null;
 var MomentoInicio = null;
