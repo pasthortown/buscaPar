@@ -26,7 +26,8 @@ class Controlador_jugadoresjuego extends Controlador_Base
    function actualizar($args)
    {
       $jugadoresjuego = new JugadoresJuego($args["id"],$args["idJuego"],$args["idJugador"],$args["cartaJugador"],$args["seleccionJugador"],$args["momentoSeleccion"]);
-      $parametros = array($jugadoresjuego->idJuego,$jugadoresjuego->idJugador,$jugadoresjuego->cartaJugador,$jugadoresjuego->seleccionJugador,$jugadoresjuego->momentoSeleccion,$jugadoresjuego->id);
+      $fechaCreacion = date("Y-m-d H:i:s");
+      $parametros = array($jugadoresjuego->idJuego,$jugadoresjuego->idJugador,$jugadoresjuego->cartaJugador,$jugadoresjuego->seleccionJugador,$fechaCreacion,$jugadoresjuego->id);
       $sql = "UPDATE JugadoresJuego SET idJuego = ?,idJugador = ?,cartaJugador = ?,seleccionJugador = ?,momentoSeleccion = ? WHERE id = ?;";
       $momentoSeleccionNoSQLTime = strtotime($jugadoresjuego->momentoSeleccion);
       $momentoSeleccionSQLTime = date("Y-m-d H:i:s", $momentoSeleccionNoSQLTime);

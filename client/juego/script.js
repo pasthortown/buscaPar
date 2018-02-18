@@ -25,7 +25,7 @@ function jugando() {
                     if(juegoResult[0].idJugadorGanador == JSON.parse(sessionStorage.getItem('usuario')).id){
                         swal({
                             title: "Felicidades",
-                            text: "Eres ganaste!!!",
+                            text: "Eres el ganador!!!",
                             icon: "success",
                         })
                         .then((r)=>{
